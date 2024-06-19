@@ -1,0 +1,299 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#F5F9FF"
+        tools:context=".ui.menu.module.submodule.SubModuleFragment">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="#F5F9FF"
+            android:paddingHorizontal="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/btnBack"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/ic_arrow_left"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/toolbar_title"
+                style="@style/Poppins.600.Black.18sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Tambah Modul"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toTopOf="@id/llAction"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/toolbar">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/etSearch"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="16dp"
+                    android:clickable="false"
+                    android:enabled="false"
+                    android:hint="Cari Kata yang diinginkan"
+                    app:boxBackgroundColor="@color/white"
+                    app:boxStrokeColor="@color/white"
+                    app:boxStrokeWidth="0dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:drawableEnd="@drawable/ic_search"
+                        android:drawablePadding="8dp"
+                        android:inputType="textEmailAddress" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cardIvContainer"
+                    android:layout_width="0dp"
+                    android:layout_height="280dp"
+                    android:layout_marginHorizontal="10dp"
+                    android:background="@drawable/bg_sub_module"
+                    android:orientation="vertical"
+                    app:cardCornerRadius="20dp"
+                    app:cardElevation="1dp"
+                    app:layout_constraintEnd_toEndOf="@+id/etSearch"
+                    app:layout_constraintStart_toStartOf="@+id/etSearch"
+                    app:layout_constraintTop_toBottomOf="@+id/etSearch" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/etAddSubject"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="8dp"
+                    android:layout_marginTop="8dp"
+                    android:hint="Tambahkan Judul"
+                    android:textColorHint="#64748B"
+                    android:translationZ="2dp"
+                    app:boxBackgroundColor="#F3F5F8"
+                    app:boxStrokeColor="#F3F5F8"
+                    app:boxStrokeWidth="0dp"
+                    app:layout_constraintBottom_toBottomOf="@+id/cardIvContainer"
+                    app:layout_constraintEnd_toEndOf="@id/ivModule"
+                    app:layout_constraintStart_toStartOf="@id/cardIvContainer"
+                    app:layout_constraintTop_toBottomOf="@id/ivModule">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:drawablePadding="8dp"
+                        android:inputType="text" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/ivModule"
+                    android:layout_width="0dp"
+                    android:layout_height="200dp"
+                    android:layout_marginHorizontal="10dp"
+                    android:background="@color/black_60"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/ic_image"
+                    android:translationZ="2dp"
+                    app:layout_constraintEnd_toEndOf="@+id/etSearch"
+                    app:layout_constraintStart_toStartOf="@+id/etSearch"
+                    app:layout_constraintTop_toBottomOf="@+id/etSearch"
+                    app:shapeAppearance="@style/roundedBottomImageView" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/btnAddImage"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:background="@drawable/bg_white_outline_rounded_5"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:src="@drawable/ic_add"
+                    android:translationZ="3dp"
+                    app:layout_constraintBottom_toBottomOf="@id/ivModule"
+                    app:layout_constraintEnd_toEndOf="@id/ivModule"
+                    app:layout_constraintStart_toStartOf="@id/ivModule"
+                    app:layout_constraintTop_toTopOf="@id/ivModule" />
+
+                <LinearLayout
+                    android:id="@+id/llDescription"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="-8dp"
+                    android:background="@color/white"
+                    android:orientation="vertical"
+                    app:layout_constraintTop_toBottomOf="@id/cardIvContainer">
+
+                    <TextView
+                        style="@style/Poppins.600.Black.20sp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="16dp"
+                        android:layout_marginTop="16dp"
+                        android:text="Tingkat Kesulitan"
+                        android:translationZ="2dp" />
+
+                    <RadioGroup
+                        android:id="@+id/rgDifficulty"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="16dp"
+                        android:orientation="horizontal">
+
+                        <RadioButton
+                            android:id="@+id/rbBasic"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Dasar" />
+
+                        <RadioButton
+                            android:id="@+id/rbIntermediate"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Menengah" />
+
+                        <RadioButton
+                            android:id="@+id/rbAdvanced"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Lanjut" />
+                    </RadioGroup>
+
+                    <TextView
+                        style="@style/Poppins.600.Black.20sp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="16dp"
+                        android:layout_marginTop="16dp"
+                        android:text="Deskripsi"
+                        android:translationZ="2dp" />
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/etAddDesc"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="16dp"
+                        android:layout_marginTop="8dp"
+                        android:hint="Tambahkan Deskripsi Modul"
+                        android:textColorHint="#64748B"
+                        android:translationZ="2dp"
+                        app:boxBackgroundColor="#F3F5F8"
+                        app:boxStrokeColor="#F3F5F8"
+                        app:boxStrokeWidth="0dp"
+                        app:layout_constraintBottom_toBottomOf="@+id/cardIvContainer"
+                        app:layout_constraintEnd_toEndOf="@id/ivModule"
+                        app:layout_constraintStart_toStartOf="@id/cardIvContainer"
+                        app:layout_constraintTop_toBottomOf="@id/ivModule">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:drawablePadding="8dp"
+                            android:inputType="textMultiLine" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="#CBD5E1" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:paddingVertical="16dp"
+                        android:visibility="gone">
+
+                        <TextView
+                            style="@style/Poppins.Black60.14sp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentStart="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginStart="16dp"
+                            android:layout_toStartOf="@id/btnQuiz"
+                            tools:text="Yuk asah kemampuanmu\ndengan mengerjakan kuis" />
+
+                        <androidx.appcompat.widget.AppCompatButton
+                            android:id="@+id/btnQuiz"
+                            style="@style/Button.Primary15"
+                            android:layout_width="wrap_content"
+                            android:layout_height="48dp"
+                            android:layout_alignParentEnd="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginHorizontal="16dp"
+                            android:text="Mulai Kuis"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+                    </RelativeLayout>
+                </LinearLayout>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rvSubmodule"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="16dp"
+                    android:layout_marginTop="8dp"
+                    android:nestedScrollingEnabled="false"
+                    android:orientation="vertical"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                    app:layout_constraintTop_toBottomOf="@id/llDescription"
+                    tools:itemCount="3"
+                    tools:listitem="@layout/item_submodule" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.core.widget.NestedScrollView>
+
+        <RelativeLayout
+            android:id="@+id/llAction"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingVertical="16dp"
+            app:layout_constraintBottom_toBottomOf="parent">
+            <com.github.leandroborgesferreira.loadingbutton.customViews.CircularProgressButton
+                android:id="@+id/btnSubmit"
+                android:layout_centerInParent="true"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="16dp"
+                android:background="@drawable/sample"
+                android:text="Buat Modul"
+                android:enabled="false"
+                android:textColor="@color/white"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:spinning_bar_color="#FFF"
+                app:initialCornerAngle="16dp"
+                app:spinning_bar_padding="6dp"
+                app:spinning_bar_width="4dp" />
+        </RelativeLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

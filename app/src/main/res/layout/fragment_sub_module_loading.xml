@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.facebook.shimmer.ShimmerFrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginBottom="12dp"
+    app:shimmer_auto_start="true"
+    app:shimmer_repeat_mode="restart">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <View
+            android:id="@+id/etSearchLoading"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginHorizontal="16dp"
+            android:background="@drawable/bg_black_rounded_10"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardIvContainerLoading"
+            android:layout_width="0dp"
+            android:layout_height="250dp"
+            android:layout_marginHorizontal="10dp"
+            android:background="@drawable/bg_sub_module"
+            android:orientation="vertical"
+            app:cardCornerRadius="20dp"
+            app:cardElevation="2dp"
+            app:layout_constraintEnd_toEndOf="@+id/etSearchLoading"
+            app:layout_constraintStart_toStartOf="@+id/etSearchLoading"
+            app:layout_constraintTop_toBottomOf="@+id/etSearchLoading" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="22dp"
+            android:layout_marginHorizontal="8dp"
+            android:layout_marginVertical="16dp"
+            android:background="@drawable/bg_black_rounded_10"
+            android:translationZ="2dp"
+            app:layout_constraintBottom_toBottomOf="@+id/cardIvContainerLoading"
+            app:layout_constraintEnd_toEndOf="@id/ivModuleLoading"
+            app:layout_constraintStart_toStartOf="@id/cardIvContainerLoading"
+            app:layout_constraintTop_toBottomOf="@id/ivModuleLoading" />
+
+        <View
+            android:id="@+id/ivModuleLoading"
+            android:layout_width="0dp"
+            android:layout_height="200dp"
+            android:layout_marginHorizontal="10dp"
+            android:background="@drawable/bg_black_rounded_10"
+            android:scaleType="centerCrop"
+            android:translationZ="2dp"
+            app:layout_constraintEnd_toEndOf="@+id/etSearchLoading"
+            app:layout_constraintStart_toStartOf="@+id/etSearchLoading"
+            app:layout_constraintTop_toBottomOf="@+id/etSearchLoading" />
+
+        <LinearLayout
+            android:id="@+id/llDescription"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="-8dp"
+            android:background="@color/white"
+            android:orientation="vertical"
+            app:layout_constraintTop_toBottomOf="@id/cardIvContainerLoading">
+
+            <View
+                android:layout_width="wrap_content"
+                android:layout_height="22dp"
+                android:layout_marginHorizontal="16dp"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/bg_black_rounded_10"
+                android:translationZ="2dp"
+                app:layout_constraintBottom_toBottomOf="@+id/cardIvContainerLoading"
+                app:layout_constraintEnd_toEndOf="@id/ivModuleLoading"
+                app:layout_constraintStart_toStartOf="@id/cardIvContainerLoading"
+                app:layout_constraintTop_toBottomOf="@id/ivModuleLoading" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:layout_marginHorizontal="16dp"
+                android:layout_marginTop="2dp"
+                android:background="@drawable/bg_black_rounded_10"
+                android:translationZ="2dp"
+                app:layout_constraintBottom_toBottomOf="@+id/cardIvContainerLoading"
+                app:layout_constraintEnd_toEndOf="@id/ivModuleLoading"
+                app:layout_constraintStart_toStartOf="@id/cardIvContainerLoading"
+                app:layout_constraintTop_toBottomOf="@id/ivModuleLoading" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#CBD5E1" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingVertical="16dp">
+
+                <View
+                    android:layout_width="wrap_content"
+                    android:layout_height="32dp"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="16dp"
+                    android:layout_toStartOf="@id/btnQuizLoading"
+                    android:background="@drawable/bg_black_rounded_10" />
+
+                <View
+                    android:id="@+id/btnQuizLoading"
+                    android:layout_width="80dp"
+                    android:layout_height="48dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginHorizontal="16dp"
+                    android:background="@drawable/bg_black_rounded_10" />
+            </RelativeLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/llSubmodule"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintTop_toBottomOf="@id/llDescription">
+
+            <include layout="@layout/item_submodule_loading" />
+
+            <include layout="@layout/item_submodule_loading" />
+
+            <include layout="@layout/item_submodule_loading" />
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</com.facebook.shimmer.ShimmerFrameLayout>

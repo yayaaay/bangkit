@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="12dp"
+        app:cardCornerRadius="16dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/ivModule"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:scaleType="centerCrop"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:src="@tools:sample/backgrounds/scenic" />
+
+            <TextView
+                android:id="@+id/tvModuleLevel"
+                style="@style/Poppins.600.Orange.12sp"
+                android:layout_width="0dp"
+                android:layout_marginTop="12dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toEndOf="@id/ivModule"
+                android:layout_marginStart="12dp"
+                android:lines="1"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/ivDelete"
+                tools:text="@tools:sample/lorem"/>
+            
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/ivDelete"
+                app:shapeAppearance="@style/roundedImageView"
+                app:layout_constraintTop_toTopOf="@id/tvModuleLevel"
+                app:layout_constraintBottom_toBottomOf="@+id/tvModuleLevel"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_width="wrap_content"
+                android:src="@drawable/ic_close"
+                android:background="@color/primary"
+                app:tint="@color/white"
+                android:layout_marginEnd="16dp"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/tvModuleTitle"
+                style="@style/Poppins.600.Black.16sp"
+                android:layout_width="0dp"
+                android:textColor="#202244"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="16dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toEndOf="@id/ivModule"
+                android:layout_marginStart="12dp"
+                app:layout_constraintTop_toBottomOf="@id/tvModuleLevel"
+                app:layout_constraintEnd_toEndOf="parent"
+                tools:text="@tools:sample/lorem"/>
+
+            <TextView
+                android:id="@+id/tvModuleDesc"
+                style="@style/Poppins.600.Black.12sp"
+                android:layout_width="0dp"
+                android:textColor="@color/black_60"
+                android:layout_marginTop="4dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toEndOf="@id/ivModule"
+                android:layout_marginStart="12dp"
+                android:lines="2"
+                android:layout_marginEnd="16dp"
+                app:layout_constraintTop_toBottomOf="@id/tvModuleTitle"
+                app:layout_constraintEnd_toEndOf="parent"
+                tools:text="@tools:sample/lorem/random"/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+</layout>

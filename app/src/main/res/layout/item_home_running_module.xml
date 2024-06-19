@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="300dp"
+        android:layout_marginEnd="16dp"
+        android:layout_height="wrap_content">
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/ivBg"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="#316D86"
+            app:contentPadding="16dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:shapeAppearance="@style/roundedImageView" />
+
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/ivModule"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:background="@color/white"
+            android:src="@drawable/ic_translate"
+            app:contentPadding="16dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:shapeAppearance="@style/circleImageView"
+            app:tint="#316D86" />
+
+        <TextView
+            android:id="@+id/tvModuleTitle"
+            style="@style/Poppins.500.White.14sp"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:gravity="center_vertical"
+            android:lines="2"
+            android:text="Alfabet Bahasa Isyarat"
+            app:layout_constraintBottom_toBottomOf="@+id/ivModule"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/ivModule"
+            app:layout_constraintTop_toTopOf="@+id/ivModule" />
+
+        <com.mackhartley.roundedprogressbar.RoundedProgressBar
+            android:id="@+id/pbModule"
+            android:layout_width="0dp"
+            android:layout_height="24dp"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginTop="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/ivModule"
+            app:rpbBackgroundColor="#5EFFFFFF"
+            app:rpbBackgroundTextColor="#fff"
+            app:rpbCornerRadiusBottomLeft="2dp"
+            app:rpbCornerRadiusBottomRight="12dp"
+            app:rpbCornerRadiusTopLeft="12dp"
+            app:rpbCornerRadiusTopRight="2dp"
+            app:rpbProgress="40"
+            app:rpbProgressColor="#12C91A"
+            app:rpbProgressTextColor="#fff"
+            app:rpbTextPadding="12dp" />
+
+        <TextView
+            android:id="@+id/tvTotalModule"
+            style="@style/Poppins.500.White.14sp"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="32dp"
+            android:text="24 Modul"
+            app:layout_constraintBottom_toBottomOf="@id/ivBg"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/pbModule" />
+
+        <TextView
+            android:id="@+id/tvTotalQuiz"
+            style="@style/Poppins.500.White.14sp"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="32dp"
+            android:text="3 Kuis"
+            app:layout_constraintBottom_toBottomOf="@id/ivBg"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/pbModule" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

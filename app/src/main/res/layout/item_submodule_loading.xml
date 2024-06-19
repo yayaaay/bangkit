@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        app:cardCornerRadius="16dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="16dp">
+
+            <View
+                android:id="@+id/ivPlay"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:background="@drawable/bg_black_rounded_10"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <View
+                android:id="@+id/tvSubmoduleTitle"
+                android:layout_width="0dp"
+                android:layout_height="18dp"
+                android:layout_marginStart="12dp"
+                android:layout_marginEnd="16dp"
+                android:background="@drawable/bg_black_rounded_10"
+                app:layout_constraintBottom_toTopOf="@id/tvSubmoduleTime"
+                app:layout_constraintEnd_toStartOf="@id/ivEdit"
+                app:layout_constraintStart_toEndOf="@id/ivPlay"
+                app:layout_constraintTop_toTopOf="@id/ivPlay" />
+
+            <View
+                android:id="@+id/tvSubmoduleTime"
+                style="@style/Poppins.600.Black.12sp"
+                android:layout_width="0dp"
+                android:layout_height="14dp"
+                android:layout_marginStart="12dp"
+                android:layout_marginEnd="16dp"
+                android:background="@drawable/bg_black_rounded_10"
+                app:layout_constraintBottom_toBottomOf="@id/ivPlay"
+                app:layout_constraintEnd_toStartOf="@id/ivEdit"
+                app:layout_constraintStart_toEndOf="@id/ivPlay"
+                app:layout_constraintTop_toBottomOf="@id/tvSubmoduleTitle" />
+
+            <View
+                android:id="@+id/ivEdit"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:background="@drawable/bg_black_rounded_10"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+</layout>

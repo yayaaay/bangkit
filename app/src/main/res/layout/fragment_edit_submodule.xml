@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#F5F9FF"
+        tools:context=".ui.menu.module.submodule.SubModuleFragment">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="#F5F9FF"
+            android:paddingHorizontal="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/btnBack"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/ic_arrow_left"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/toolbar_title"
+                style="@style/Poppins.600.Black.18sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Materi"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+            <amirlabs.sapasemua.utils.widget.MultiStateView
+                android:id="@+id/msvSubmodule"
+                app:layout_constraintTop_toBottomOf="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:msv_animateViewChanges="true"
+                app:msv_emptyView="@layout/default_empty_layout"
+                app:msv_errorView="@layout/default_error_layout"
+                app:msv_loadingView="@layout/fragment_sub_module_loading">
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/etSearch"
+                        android:layout_width="match_parent"
+                        android:visibility="invisible"
+                        android:layout_height="1dp"
+                        android:layout_marginHorizontal="16dp"
+                        android:hint="Cari Kata yang diinginkan"
+                        app:boxBackgroundColor="@color/white"
+                        app:boxStrokeColor="@color/white"
+                        app:boxStrokeWidth="0dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:drawableEnd="@drawable/ic_search"
+                            android:drawablePadding="8dp"
+                            android:inputType="textEmailAddress" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/cardIvContainer"
+                        android:layout_width="0dp"
+                        android:layout_height="200dp"
+                        android:layout_marginHorizontal="10dp"
+                        android:background="@drawable/bg_sub_module"
+                        android:orientation="vertical"
+                        app:cardCornerRadius="20dp"
+                        app:cardElevation="2dp"
+                        app:layout_constraintEnd_toEndOf="@+id/etSearch"
+                        app:layout_constraintStart_toStartOf="@+id/etSearch"
+                        app:layout_constraintTop_toBottomOf="@+id/etSearch">
+
+                        <androidx.media3.ui.PlayerView
+                            android:id="@+id/ivModule"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:translationZ="2dp"
+                            app:layout_constraintEnd_toEndOf="@+id/etSearch"
+                            app:layout_constraintStart_toStartOf="@+id/etSearch"
+                            app:layout_constraintTop_toBottomOf="@+id/etSearch"
+                            app:shutter_background_color="@android:color/transparent"
+                            app:use_controller="false" />
+
+                    </androidx.cardview.widget.CardView>
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/btnAddImage"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:background="@drawable/bg_white_outline_rounded_5"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:src="@drawable/ic_add"
+                        android:translationZ="3dp"
+                        app:layout_constraintBottom_toBottomOf="@id/cardIvContainer"
+                        app:layout_constraintEnd_toEndOf="@id/cardIvContainer"
+                        app:layout_constraintStart_toStartOf="@id/cardIvContainer"
+                        app:layout_constraintTop_toTopOf="@id/cardIvContainer" />
+
+                    <LinearLayout
+                        android:id="@+id/llDescription"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_marginTop="-8dp"
+                        android:paddingTop="8dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        android:background="@color/white"
+                        android:orientation="vertical"
+                        app:layout_constraintTop_toBottomOf="@id/cardIvContainer">
+
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/etTitle"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginHorizontal="16dp"
+                            android:hint="Judul"
+                            android:layout_marginTop="16dp"
+                            app:boxBackgroundColor="#F5F9FF"
+                            app:boxStrokeColor="@color/black"
+                            app:boxStrokeWidth="1dp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:drawablePadding="8dp"
+                                android:inputType="textEmailAddress" />
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/etDuration"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginHorizontal="16dp"
+                            android:hint="Durasi"
+                            android:layout_marginTop="8dp"
+                            app:boxBackgroundColor="#F5F9FF"
+                            app:boxStrokeColor="@color/black"
+                            app:boxStrokeWidth="1dp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:drawablePadding="8dp"
+                                android:inputType="textEmailAddress" />
+                        </com.google.android.material.textfield.TextInputLayout>
+                    </LinearLayout>
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/btnDelete"
+                        style="@style/Button.Delete"
+                        android:layout_width="0dp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toStartOf="@id/btnSubmit"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="16dp"
+                        android:layout_marginHorizontal="16dp"
+                        android:text="Hapus Submodul"
+                        app:layout_constraintBottom_toBottomOf="parent" />
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/btnSubmit"
+                        style="@style/Button.Primary15"
+                        app:layout_constraintStart_toEndOf="@id/btnDelete"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="16dp"
+                        android:layout_marginHorizontal="16dp"
+                        android:text="Submit Submodul"
+                        app:layout_constraintBottom_toBottomOf="parent" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </amirlabs.sapasemua.utils.widget.MultiStateView>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

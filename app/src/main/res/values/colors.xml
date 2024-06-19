@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="primary">#0961F5</color>
+    <color name="primary2">#4DA8DC</color>
+    <color name="primary_38">#66F2F6FA</color>
+    <color name="primary_10">#1A329BD7</color>
+    <color name="secondary">#9bceeb</color>
+    <color name="accent">#C9D6DF</color>
+
+    <color name="blue">#68E1FD</color>
+    <color name="blue2">#24285B</color>
+    <color name="blue3">#EBF6FB</color>
+    <color name="yellow">#F4B40E</color>
+    <color name="yellow2">#FFD200</color>
+    <color name="green">#12C6BB</color>
+    <color name="green_10">#1A12C6BB</color>
+    <color name="red">#DA4524</color>
+    <color name="red2">#F4A28C</color>
+    <color name="red3">#CE8172</color>
+    <color name="grey">#E6E6E6</color>
+    <color name="grey2">#C1C1C1</color>
+
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="black_10">#1A000000</color>
+    <color name="black_38">#61000000</color>
+    <color name="black_60">#99000000</color>
+    <color name="black2">#64748B</color>
+    <color name="black3">#52616B</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <color name="mp_color_primary">#007F8B</color>
+    <color name="mp_color_primary_variant">#12B5CB</color>
+    <color name="mp_color_primary_dark">#00676D</color>
+    <color name="mp_color_secondary">#FBBC04</color>
+    <color name="mp_color_secondary_variant">#F9AB00</color>
+    <color name="mp_color_error">#B00020</color>
+    <color name="toolbar_background">#E0E0E0</color>
+    <color name="bottom_sheet_background">#EEEEEE</color>
+    <color name="bottom_sheet_text_color">@android:color/black</color>
+    <color name="icActive">#FFFFFFFF</color>
+    <color name="icFocused">#DDFFFFFF</color>
+    <color name="icPressed">#AAFFFFFF</color>
+
+</resources>

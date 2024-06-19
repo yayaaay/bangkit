@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">SapaSemua</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="onboarding_title_1">Halo 👋 ,\nSelamat datang!</string>
+    <string name="onboarding_title_2">Belajar Secara Online</string>
+    <string name="onboarding_title_3">Belajar Kapan Aja</string>
+    <string name="onboarding_desc_1">Temukan petualangan belajar kamu bersama Sapa Semua</string>
+    <string name="onboarding_desc_2">Ga perlu susah - susah cari tempat kursus bahasa isyarat sekarang kita bisa belajar bahasa isyarat secara daring.</string>
+    <string name="onboarding_desc_3">Tingkatkan kemampuan bahasa isyarat kamu dengan Sapa Semua belajar kapan aja, dan dimana aja.</string>
+    <string name="about_goal_1">Memudahkan seseorang yang ingin belajar bahasa isyarat dengan mudah tanpa datang ketempat.</string>
+    <string name="about_goal_2">Membantu temanSapa untuk mengenal bahasa isyarat dengan interaktif dan intuitif.</string>
+    <string name="about_goal_3">Menjadi wadah teman-teman tuli untuk saling berinteraksi sesama.</string>
+</resources>
